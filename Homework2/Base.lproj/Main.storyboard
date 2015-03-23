@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Bookmarks-->
         <scene sceneID="9CP-kM-pkC">
             <objects>
                 <tableViewController id="djc-qn-PcJ" customClass="BookmarkTableViewController" sceneMemberID="viewController">
@@ -25,7 +25,7 @@
                             <outlet property="delegate" destination="djc-qn-PcJ" id="xfY-n9-Ses"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="xQK-ZP-hlm"/>
+                    <navigationItem key="navigationItem" title="Bookmarks" id="xQK-ZP-hlm"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wm0-FZ-zWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
