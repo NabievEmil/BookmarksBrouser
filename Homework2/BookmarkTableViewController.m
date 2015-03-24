@@ -59,7 +59,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    return 7;
+    return self.bookmarks.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -70,7 +70,7 @@ static NSString * const reuseIdentifier = @"Cell";
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BookmarkViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"BookmarkScene"];
     controller.bookmarkName = self.bookmarks[indexPath.item];
