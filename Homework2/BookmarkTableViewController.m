@@ -9,6 +9,7 @@
 #import "BookmarkTableViewController.h"
 #import "BookmarkViewController.h"
 #import "BookmarkWebView.h"
+#import "BookmarkViewCell.h"
 
 @interface BookmarkTableViewController ()
 
@@ -66,16 +67,16 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier];
-    
-    [cell setText:[NSString stringWithFormat:@"%@",self.bookmarks[indexPath.row]]];
+    BookmarkViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    NSString *name = self.bookmarks[indexPath.item];
+    cell.labelName.text = name;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BookmarkViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"BookmarkScene"];
-    controller.bookmarkName = self.bookmarks[indexPath.row];
+    controller.bookmarkName = self.bookmarks[indexPath.item];
     [self.navigationController pushViewController:controller animated:YES];
 }
 
