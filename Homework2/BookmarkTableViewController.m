@@ -75,6 +75,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BookmarkViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"BookmarkScene"];
+    controller.bookmarkName = self.bookmarks[indexPath.row];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

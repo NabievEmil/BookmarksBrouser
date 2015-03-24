@@ -58,11 +58,14 @@
         <!--Navigation Controller-->
         <scene sceneID="fEW-ha-6Fy">
             <objects>
-                <navigationController id="hBW-En-4Xp" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="hBW-En-4Xp" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cq2-LK-vdu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="jrF-Px-MNK">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="djc-qn-PcJ" kind="relationship" relationship="rootViewController" id="Qnu-iw-rqC"/>
                     </connections>

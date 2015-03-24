@@ -10,4 +10,6 @@
 
 @interface BookmarkViewController : UIViewController
 
+@property (strong,nonatomic) NSString *bookmarkName;
+
 @end
