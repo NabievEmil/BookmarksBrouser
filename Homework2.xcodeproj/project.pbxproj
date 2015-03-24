@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E15326A81AC13D8300BFBDB2 /* BookmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15326A71AC13D8300BFBDB2 /* BookmarkViewController.m */; };
+		E15326AB1AC13DB000BFBDB2 /* BookmarkWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15326AA1AC13DB000BFBDB2 /* BookmarkWebView.m */; };
 		E1CDD4231AC04D3800421716 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CDD4221AC04D3800421716 /* main.m */; };
 		E1CDD4261AC04D3800421716 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CDD4251AC04D3800421716 /* AppDelegate.m */; };
 		E1CDD4291AC04D3800421716 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CDD4281AC04D3800421716 /* ViewController.m */; };
@@ -28,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E15326A61AC13D8300BFBDB2 /* BookmarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkViewController.h; sourceTree = "<group>"; };
+		E15326A71AC13D8300BFBDB2 /* BookmarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkViewController.m; sourceTree = "<group>"; };
+		E15326A91AC13DB000BFBDB2 /* BookmarkWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookmarkWebView.h; sourceTree = "<group>"; };
+		E15326AA1AC13DB000BFBDB2 /* BookmarkWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookmarkWebView.m; sourceTree = "<group>"; };
 		E1CDD41D1AC04D3800421716 /* Homework2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CDD4211AC04D3800421716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1CDD4221AC04D3800421716 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,6 +100,10 @@
 				E1CDD4201AC04D3800421716 /* Supporting Files */,
 				E1CDD4461AC04DC200421716 /* BookmarkTableViewController.h */,
 				E1CDD4471AC04DC200421716 /* BookmarkTableViewController.m */,
+				E15326A61AC13D8300BFBDB2 /* BookmarkViewController.h */,
+				E15326A71AC13D8300BFBDB2 /* BookmarkViewController.m */,
+				E15326A91AC13DB000BFBDB2 /* BookmarkWebView.h */,
+				E15326AA1AC13DB000BFBDB2 /* BookmarkWebView.m */,
 			);
 			path = Homework2;
 			sourceTree = "<group>";
@@ -225,9 +235,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1CDD4291AC04D3800421716 /* ViewController.m in Sources */,
+				E15326A81AC13D8300BFBDB2 /* BookmarkViewController.m in Sources */,
 				E1CDD4481AC04DC200421716 /* BookmarkTableViewController.m in Sources */,
 				E1CDD4261AC04D3800421716 /* AppDelegate.m in Sources */,
 				E1CDD4231AC04D3800421716 /* main.m in Sources */,
+				E15326AB1AC13DB000BFBDB2 /* BookmarkWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +432,7 @@
 				E1CDD4421AC04D3800421716 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E1CDD4431AC04D3800421716 /* Build configuration list for PBXNativeTarget "Homework2Tests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +441,7 @@
 				E1CDD4451AC04D3800421716 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

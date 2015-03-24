@@ -31,15 +31,15 @@
             </objects>
             <point key="canvasLocation" x="389" y="404"/>
         </scene>
-        <!--View Controller-->
+        <!--Bookmark View Controller-->
         <scene sceneID="q8M-Tz-Prn">
             <objects>
-                <viewController id="W3k-Oi-mK5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BookmarkScene" id="W3k-Oi-mK5" customClass="BookmarkViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="byS-Sh-Wpk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" id="hog-sR-smB">
+                            <webView contentMode="scaleToFill" id="hog-sR-smB" customClass="BookmarkWebView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,6 +47,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="webSite" destination="hog-sR-smB" id="YO2-bb-5QO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inb-Mu-OAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

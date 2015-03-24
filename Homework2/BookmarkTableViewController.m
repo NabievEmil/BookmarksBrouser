@@ -7,6 +7,8 @@
 //
 
 #import "BookmarkTableViewController.h"
+#import "BookmarkViewController.h"
+#import "BookmarkWebView.h"
 
 @interface BookmarkTableViewController ()
 
@@ -64,12 +66,17 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
+    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier];
     
     [cell setText:[NSString stringWithFormat:@"%@",self.bookmarks[indexPath.row]]];
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BookmarkViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"BookmarkScene"];
+    [self.navigationController pushViewController:controller animated:YES];
+}
 
 /*
 // Override to support conditional editing of the table view.
