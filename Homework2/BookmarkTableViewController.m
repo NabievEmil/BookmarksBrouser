@@ -10,10 +10,12 @@
 #import "BookmarkViewController.h"
 #import "BookmarkWebView.h"
 #import "BookmarkViewCell.h"
+#import "BookmarksModel.h"
 
 @interface BookmarkTableViewController ()
 
 @property (strong, nonatomic) NSArray *bookmarks;
+@property (strong, nonatomic) BookmarksModel *model;
 
 @end
 
@@ -24,13 +26,8 @@
     self = [super initWithCoder:aDecoder];
     if(self)
     {
-        self.bookmarks = @[@"http://apple.com",
-                           @"http://google.com",
-                           @"http://yahoo.com",
-                           @"http://vk.com",
-                           @"http://facebook.com",
-                           @"http://ya.ru",
-                           @"http://mail.ru",];
+        self.model = [BookmarksModel new];
+        self.bookmarks = [self.model bookmarks];
     }
     return self;
 }
