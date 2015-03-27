@@ -56,6 +56,29 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="MYs-sZ-e6R">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="Osa-Xf-nSS">
+                                        <connections>
+                                            <action selector="buttonBack:" destination="W3k-Oi-mK5" id="zEM-jV-iNZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jLT-If-HPH"/>
+                                    <barButtonItem systemItem="refresh" id="ctw-x1-6cj">
+                                        <connections>
+                                            <action selector="buttonRefresh:" destination="W3k-Oi-mK5" id="v0w-KD-QDG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gKa-gk-Xzc"/>
+                                    <barButtonItem systemItem="fastForward" id="EXe-Eh-RFB">
+                                        <connections>
+                                            <action selector="buttonForward:" destination="W3k-Oi-mK5" id="v6G-ea-blG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -70,7 +93,7 @@
         <!--Navigation Controller-->
         <scene sceneID="fEW-ha-6Fy">
             <objects>
-                <navigationController toolbarHidden="NO" id="hBW-En-4Xp" sceneMemberID="viewController">
+                <navigationController id="hBW-En-4Xp" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cq2-LK-vdu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

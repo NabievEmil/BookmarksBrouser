@@ -20,9 +20,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.webSite loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_bookmarkName]]];
+}
+- (IBAction)buttonBack:(id)sender
+{
     [self.webSite goBack];
-    [self.webSite goForward];
+}
+- (IBAction)buttonRefresh:(id)sender
+{
     [self.webSite loadRequest:self.webSite.request];
+}
+- (IBAction)buttonForward:(id)sender
+{
+    [self.webSite goForward];
 }
 
 - (void)didReceiveMemoryWarning {
