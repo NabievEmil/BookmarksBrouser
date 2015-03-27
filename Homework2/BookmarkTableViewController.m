@@ -14,8 +14,9 @@
 
 @interface BookmarkTableViewController ()
 
-@property (strong, nonatomic) NSArray *bookmarks;
+@property (strong, nonatomic) NSDictionary *bookmarks;
 @property (strong, nonatomic) BookmarksModel *model;
+@property (strong, nonatomic) NSArray *bookmarkKeys;
 
 @end
 
@@ -28,6 +29,7 @@
     {
         self.model = [BookmarksModel new];
         self.bookmarks = [self.model bookmarks];
+        self.bookmarkKeys = [_bookmarks allKeys];
     }
     return self;
 }
@@ -65,15 +67,17 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BookmarkViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
-    NSString *name = self.bookmarks[indexPath.item];
-    cell.labelName.text = name;
+    NSString *title = self.bookmarkKeys[indexPath.item];
+    cell.labelName.text = title;
+    NSString *webAdress =[self.bookmarks objectForKey:_bookmarkKeys[indexPath.item]];
+    cell.LabelURL.text = webAdress;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BookmarkViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"BookmarkScene"];
-    controller.bookmarkName = self.bookmarks[indexPath.item];
+    controller.bookmarkName = [self.bookmarks objectForKey:_bookmarkKeys[indexPath.item]];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

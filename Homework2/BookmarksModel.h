@@ -10,6 +10,6 @@
 
 @interface BookmarksModel : NSObject
 
--(NSArray *) bookmarks;
+-(NSDictionary *) bookmarks;
 
 @end
