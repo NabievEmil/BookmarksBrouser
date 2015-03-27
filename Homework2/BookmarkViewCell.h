@@ -11,6 +11,7 @@
 @interface BookmarkViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
+@property (weak, nonatomic) IBOutlet UILabel *LabelURL;
 
 
 @end

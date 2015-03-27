@@ -10,15 +10,15 @@
 
 @implementation BookmarksModel
 
--(NSArray *) bookmarks
+-(NSDictionary *) bookmarks
 {
-    return @[@"http://apple.com",
-             @"http://google.com",
-             @"http://yahoo.com",
-             @"http://vk.com",
-             @"http://facebook.com",
-             @"http://ya.ru",
-             @"http://mail.ru",];
+    return [[NSDictionary alloc]initWithObjectsAndKeys:@"http://apple.com",@"Apple",
+            @"http://google.com",@"Google",
+            @"http://yahoo.com",@"Yahoo",
+            @"http://vk.com",@"Vkontakte",
+            @"http://facebook.com",@"Facebook",
+            @"http://ya.ru",@"Yandex",
+            @"http://mail.ru",@"Mail", nil];
 }
 
 @end
