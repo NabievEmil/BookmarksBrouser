@@ -55,21 +55,28 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return self.bookmarks.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    return self.bookmarks.count;
+    return [[self.bookmarks objectForKey:self.bookmarkKeys[section]] count];
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return self.bookmarkKeys[section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BookmarkViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
-    NSString *title = self.bookmarkKeys[indexPath.item];
+    NSDictionary *usedBookmarkSection = [self.bookmarks objectForKey:self.bookmarkKeys[indexPath.section]];
+    NSArray *usedBookmarkSectionKeys = [usedBookmarkSection allKeys];
+    NSString *title = usedBookmarkSectionKeys[indexPath.item];
     cell.labelName.text = title;
-    NSString *webAdress =[self.bookmarks objectForKey:_bookmarkKeys[indexPath.item]];
+    NSString *webAdress =[usedBookmarkSection objectForKey:usedBookmarkSectionKeys[indexPath.item]];
     cell.LabelURL.text = webAdress;
     return cell;
 }
@@ -77,7 +84,9 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BookmarkViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"BookmarkScene"];
-    controller.bookmarkName = [self.bookmarks objectForKey:_bookmarkKeys[indexPath.item]];
+    NSDictionary *usedBookmarkSection = [self.bookmarks objectForKey:self.bookmarkKeys[indexPath.section]];
+    NSArray *usedBookmarkSectionKeys = [usedBookmarkSection allKeys];
+    controller.bookmarkName = [usedBookmarkSection objectForKey:usedBookmarkSectionKeys[indexPath.item]];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

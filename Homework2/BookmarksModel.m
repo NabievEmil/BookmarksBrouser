@@ -12,13 +12,18 @@
 
 -(NSDictionary *) bookmarks
 {
-    return [[NSDictionary alloc]initWithObjectsAndKeys:@"http://apple.com",@"Apple",
-            @"http://google.com",@"Google",
-            @"http://yahoo.com",@"Yahoo",
-            @"http://vk.com",@"Vkontakte",
-            @"http://facebook.com",@"Facebook",
-            @"http://ya.ru",@"Yandex",
-            @"http://mail.ru",@"Mail", nil];
+    NSDictionary *socialNetworkBookmarks = [[NSDictionary alloc]initWithObjectsAndKeys:@"http://vk.com",@"Vkontakte",
+                                            @"http://mail.ru",@"Mail",
+                                            @"http://facebook.com",@"Facebook", nil];
+    NSDictionary *searchSystemBookmarks = [[NSDictionary alloc]initWithObjectsAndKeys:@"http://google.com",@"Google",
+                                           @"http://yahoo.com",@"Yahoo",
+                                           @"http://ya.ru",@"Yandex", nil];
+    NSDictionary *newsBookmarks = [[NSDictionary alloc]initWithObjectsAndKeys:@"http://ria.ru",@"Ria News",
+                                   @"http://lifenews.ru",@"LifeNews",
+                                   @"http://lenta.ru",@"Lenta News", nil];
+    return [[NSDictionary alloc]initWithObjectsAndKeys:socialNetworkBookmarks,@"Social Network",
+            searchSystemBookmarks,@"Search systems",
+            newsBookmarks,@"News",nil];
 }
 
 @end
